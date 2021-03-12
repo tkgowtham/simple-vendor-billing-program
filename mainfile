@@ -1,0 +1,44 @@
+total = 0
+wg = 0.0
+def Fruits():
+        wg = float(input("Enter Weight in KG: "))
+        if fruit == "A":
+                price = 100
+        elif fruit == "G":
+                price = 120
+        elif fruit == "B":
+                price = 80
+        elif fruit == "O":
+                price = 110
+        amt = price * wg
+        global total
+        total += amt
+        print(amt)
+        return
+        
+                
+def main():
+        print("Welcome to the fruit vendor-seller application.")
+        print("Fruits Available :")
+        print("		(A)pple or (G)reen Apples")
+        print("		(B)anana")
+        print("		(O)range")
+        print("                (T)otal Amount")
+        global fruit
+        fruit = input(str("Enter the Fruit the customer would like to buy : "))
+        fruit = fruit.upper()
+        if fruit == 'A' or fruit == "G" or fruit == "B" or fruit == "O": 
+                Fruits()
+        elif fruit == 'T':
+                print("The total amount is: ", total)
+        else:
+                print("Wrong Input")
+
+
+
+if __name__ == '__main__':
+        y = "y"
+        while y == "y":
+                main()
+                y = input("Would you like to shop more(y/n): ")
+        print("The total amount is: ", total)
